@@ -1,0 +1,48 @@
+package Java.interviewpgms;
+
+//Java program for Method overriding
+
+class Parent {
+
+	void Print()
+	{
+		System.out.println("parent class");
+	}
+}
+
+class subclass1 extends Parent {
+
+	void Print()
+	{
+		System.out.println("subclass1");
+	}
+}
+
+class subclass2 extends Parent {
+
+	void Print()
+	{
+		System.out.println("subclass2");
+	}
+}
+
+class TestPolymorphism3 {
+	public static void main(String[] args)
+	{
+
+		Parent a;
+
+		a = new subclass1();
+		a.Print();
+
+		a = new subclass2();
+		a.Print();
+		
+		subclass1 s1 = new subclass1();
+		s1.Print();
+		
+		
+		//subclass1 s1=  new Parent(); this wont work directly
+	}
+}
+
