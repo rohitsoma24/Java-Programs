@@ -12,6 +12,7 @@ public class CollectionExamples {
 	public static void main(String[] args) {
 		
 		//HashSet: insertion order is not maintained
+		//Here we are creating instance of HashSet class assigning it to a Set reference variable
 		Set <Integer> s = new HashSet <Integer> ();
 		
 		s.add(5);
@@ -20,6 +21,8 @@ public class CollectionExamples {
 		s.add(3);
 		s.add(2);
 		
+		//Here we are creating reference variable(i) of Iterator interface
+		//then we are calling iterator method of HashSet class(s.iteraror)
 		Iterator <Integer> i =s.iterator();
 		while(i.hasNext())
 		{
