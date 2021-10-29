@@ -1,4 +1,4 @@
-package com.sortingCollections;
+package com.collection.demos;
 
 import java.util.ArrayList;
 import java.util.Collections;
