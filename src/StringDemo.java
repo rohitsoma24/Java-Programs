@@ -25,5 +25,21 @@ public class StringDemo {
 			System.out.println(a+b+"Hello");
 			
 			System.out.println("Hello"+a+b);
+			
+			
+			String str="I am Stupid";
+			
+			//if we dont pass anything(args), then split will seperate each character in a string
+			//including space and return that array of characters/strings
+			String[] c= str.split("");
+			
+			for(int i=0;i<c.length;i++)
+			{	
+			System.out.println(c[i]);
+			}
+			
+			System.out.println(c.length);
+			
+			
 		}
 }
