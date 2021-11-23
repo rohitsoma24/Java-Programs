@@ -9,7 +9,7 @@ in this case we can call overriding method of Child class not other methods whic
 we can not Override private, static, final methods
 */
 
-class Base{
+class B{
 	
 	public void display(){
 		System.out.println("Base class method");
@@ -21,7 +21,7 @@ class Base{
 	}
 }
 
-class Child extends Base{
+class Ch extends B{
 	
 	public void display()
 	{
@@ -47,7 +47,7 @@ public class MethodOverridingEx {
 		
 		//this is the reason we use polymorphism
 		//using base class ref to call child class method
-		Base b = new Child();
+		B b = new Ch();
 		
 		b.display();
 		
