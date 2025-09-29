@@ -7,15 +7,17 @@ public class StringDemo {
 			new string value, original String value will remain as it is*/
 			String s1= "MyString";
 			
-			System.out.println(s1 +"    Object Hashcode "+ s1.hashCode());
+			System.out.println(s1 +"    Object Hashcode s1"+ s1.hashCode());
 			
 			s1=s1+"Fuck";
 			
-			System.out.println(s1 +"    Object Hashcode "+ s1.hashCode());
+			System.out.println(s1 +"    Object Hashcode s1"+ s1.hashCode());
 			
 			String s2=s1.concat("Me");
 			
-			System.out.println(s2 +"    Object Hashcode "+ s1.hashCode());
+			System.out.println(s2 +"    Object Hashcode s2 "+ s2.hashCode());
+			
+			System.out.println(s1 +"    Object Hashcode s1"+ s1.hashCode());
 		
 			
 			/*Sting Concatination works from left to right

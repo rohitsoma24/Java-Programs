@@ -1,5 +1,5 @@
 package Java.interviewpgms;
-
+/*This program demonstrates how to reverse a sentence*/
 public class StringReverseAccenture {
 	
 	public static void main(String[] args) {
