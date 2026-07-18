@@ -11,8 +11,6 @@ package com.java.oops;
  * 2)Or we can simply extend that class using extends keyword which is know as inheritance
  * */
 
-import com.java.oops.Dummy;
-
 class Base {
 	
 	//Dummy d = new Dummy();

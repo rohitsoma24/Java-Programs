@@ -18,4 +18,9 @@ public class FunctionalInterfaceEx implements MyFunctionalInterface{
 	System.out.println(mf.add(x,y));
 	
 	}
+
+	@Override
+	public int add(int x, int y) {
+		return 0;
+	}
 }

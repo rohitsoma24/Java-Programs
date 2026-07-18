@@ -1,5 +1,5 @@
-# Ignore all .class files
+# Ignore all class files anywhere in the project
 *.class
 
-# Ignore class files in any subdirectory
-**/*.class
+# Ignore IntelliJ project configuration folder
+.idea/

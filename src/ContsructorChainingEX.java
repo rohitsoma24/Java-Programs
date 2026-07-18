@@ -13,7 +13,7 @@ class ContsructorChainingEX {
 		
 	}
 	
-	ContsructorChainingEX(int x int y){
+	ContsructorChainingEX(int x, int y){
 		System.out.println(x*y);
 		
 	}

@@ -6,7 +6,7 @@ import java.io.*;
 //Checked exceptions are those exceptions which are known to compiler
 //Here we we save the file it tells us to handle the IOException
 class IOChekced {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		FileReader file = new FileReader("C:\\test\\a.txt");
 		BufferedReader fileInput = new BufferedReader(file);
 		
