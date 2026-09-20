@@ -41,6 +41,7 @@ public class CGSecondHighestSalaryByCity {
                 new Employee("Anjali", "Delhi", 45000)  // Only one employee in this city
         );
 
+        //second highest salary by city
         Map<String, Optional<Integer>> secondHighestByCity = employees.stream()
                 .collect(Collectors.groupingBy(
                         Employee::getCity,
@@ -65,5 +66,48 @@ public class CGSecondHighestSalaryByCity {
                 System.out.println("City: " + city + " | 2nd Highest Salary: Not enough unique data");
             }
         });
+
+        // second highest salaried employee by city
+
+        Map<String, Optional<Employee>> seondHighestEmployeeinCity = employees.stream().collect(Collectors.groupingBy(Employee::getCity,
+                                            Collectors.collectingAndThen(Collectors.toList(),
+                                                    salaries-> salaries.stream().distinct()
+                                                            .sorted(Comparator.comparing(Employee::getSalary).reversed())
+                                                            .skip(1)
+                                                            .findFirst())));
+
+        // Printing
+
+        seondHighestEmployeeinCity.forEach((city, employee) -> {
+            if (employee.isPresent()) {
+                System.out.println("City: " + city + " | 2nd Highest paid Employee: " + employee.get());
+            } else {
+                System.out.println("City: " + city + " | 2nd Highest paid Employee: Not enough unique data");
+            }
+        });
+
+        // Highest paid Employee by city
+        Map<String, Optional<Employee>> topPaidEmployeeByCity = employees.stream().
+                collect(Collectors.groupingBy(Employee::getCity,Collectors.maxBy(Comparator.comparing(Employee::getSalary))
+                ));
+
+        // Printing
+        topPaidEmployeeByCity.forEach((city, employee)->{
+            if(employee.isPresent()){
+                System.out.println("City " + city + "==Hihest paid Employee " + employee.get());
+            }
+            else {
+                System.out.println("City " + city + "== no highest paid employee not enough data");
+            }
+        });
+
+        // Avergae Salary by City
+        Map<String, Double> avgSalaryByCity = employees.stream().collect(
+                Collectors.groupingBy(Employee::getCity, Collectors.averagingInt(Employee::getSalary))
+        );
+        // Printing
+        avgSalaryByCity.forEach((city, avgSalary) ->
+                System.out.println("City: " + city + " | Average Salary: " + avgSalary)
+        );
     }
 }
